@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>JS Calculator</title>
+</head>
+
+<body class="bg-gray-900">
+    <div class="max-w-lg mx-auto mt-32">
+        <h2 class="text-white font-medium text-5xl text-center mb-5">Calculator</h2>
+        <!-- display div -->
+        <div class="h-20 bg-gray-800 flex flex-col items-end justify-around p-3 text-wrap break-all">
+            <!-- upper display -->
+            <div class="h-1/2">
+                <h1 data-previous-operand class="font-semibold text-zinc-300 text-xl"></h1>
+            </div>
+
+
+            <!-- lower display -->
+            <div  class="h-1/2">
+                <h1 data-current-operand class="font-semibold text-white text-2xl"></h1>
+            </div>
+        </div>
+
+        <!-- AC, DEL, \ buttons -->
+        <div class="grid grid-cols-4 text-white font-semibold h-12 bg-gray-700 border-b border-gray-600">
+            <button data-all-clear class="col-span-2 hover:bg-gray-500">AC</button>
+            <button data-delete class="hover:bg-gray-500 border-x border-gray-600">DEL</button>
+            <button data-operation class="hover:bg-gray-500">/</button>
+        </div>
+
+
+        <!-- 1,2,3,* buttons -->
+        <div class="grid grid-cols-4 font-semibold text-white h-12 bg-gray-700 border-b border-gray-600">
+            <button data-number class="hover:bg-gray-500">1</button>
+            <button data-number class="hover:bg-gray-500 border-x border-gray-600">2</button>
+            <button data-number="" class="hover:bg-gray-500 border-r border-gray-600">3</button>
+            <button data-operation class="hover:bg-gray-500">*</button>
+        </div>
+
+
+        <!-- 4,5,6,+ buttons -->
+        <div class="grid grid-cols-4 font-semibold text-white h-12 bg-gray-700 border-b border-gray-600">
+            <button data-number class="hover:bg-gray-500">4</button>
+            <button data-number class="hover:bg-gray-500 border-x border-gray-600">5</button>
+            <button data-number class="hover:bg-gray-500 border-r border-gray-600">6</button>
+            <button data-operation class="hover:bg-gray-500">+</button>
+        </div>
+
+
+        <!-- 7,8,9,- buttons -->
+        <div class="grid grid-cols-4 font-semibold text-white h-12 bg-gray-700 border-b border-gray-600">
+            <button data-number class="hover:bg-gray-500">7</button>
+            <button data-number class="hover:bg-gray-500 border-x border-gray-600">8</button>
+            <button data-number class="hover:bg-gray-500 border-r border-gray-600">9</button>
+            <button data-operation class="hover:bg-gray-500">-</button>
+        </div>
+
+
+        <!-- ., 0 = buttons -->
+        <div class="grid grid-cols-4 font-semibold text-white h-12 bg-gray-700 border-b border-gray-600">
+            <button data-number class="hover:bg-gray-500">.</button>
+            <button data-number class="hover:bg-gray-500 border-x border-gray-600">0</button>
+            <button data-equals class="col-span-2 hover:bg-gray-500">=</button>
+        </div>
+    </div>
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
